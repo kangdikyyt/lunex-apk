@@ -29,6 +29,9 @@ jobs:
       - name: Install Capacitor
         run: npm install @capacitor/core @capacitor/cli @capacitor/android
 
+      - name: Create dummy dist folder
+        run: mkdir -p dist && echo "<html><body>Lunex</body></html>" > dist/index.html
+
       - name: Add Android platform
         run: npx cap add android
 
